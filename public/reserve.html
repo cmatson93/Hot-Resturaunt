@@ -15,7 +15,7 @@
 				<hr>
 				<h3>Make Reservation</h3>
 				<button id="view">View Tables</button> 
-				<button id="reserve">Home</button>
+				<button id="home">Home</button>
 			</div>
 		</div>
 		<div class="row">
@@ -51,6 +51,13 @@
 	</div>
 
 <script type="text/javascript">
+	$("#view").on("click", function() {
+		location.href = "./view.html";
+	});
+	$("#home").on("click", function() {
+		location.href = "./index.html";
+	});
+
 </script>
 </body>
 </html>
