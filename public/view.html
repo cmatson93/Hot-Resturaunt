@@ -4,7 +4,7 @@
 	<title>View Reservations</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="./style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 
 </head>
 <body>
@@ -40,8 +40,34 @@
 			<a href="/api/waitingList">API Wait List</a>
 		</div>
 	</div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+	$(function(){
+		$.get("/api/reservations", function(data) {
+			console.log(data);
+        	if (data) {
+        		for (var i=0; i<data.length; i++) {
+        			$("#reservations").append("<p>Name: " + data[i].name + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].email + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].phone + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].unique + "</p>");
+        			$("#reservations").append("<hr>");
+        		}
+        	}
+		});
+		$.get("/api/waitingList", function(data) {
+			console.log(data);
+        	if (data) {
+        		for (var i=0; i<data.length; i++) {
+        			$("#reservations").append("<p>Name: " + data[i].name + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].email + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].phone + "</p>");
+        			$("#reservations").append("<p>Name: " + data[i].unique + "</p>");
+        			$("#reservations").append("<hr>");
+        		}
+        	}
+		});
+	});
 </script>
 </body>
 </html>
