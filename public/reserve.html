@@ -59,7 +59,7 @@
 			uniqueId: $("#unique").val().trim()
 		};
 		// Post the data to the server
-		$.post("reserve", data)
+		$.post("api/new", data)
 		.then(function() {
 			if (data.isWaitListed)
 				alert("Sorry the tables are full!  Waitlisted.");
