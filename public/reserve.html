@@ -52,18 +52,19 @@
 
 <script type="text/javascript">
 	$("#submit").on("click", function() {
-		console.log("on click");
 		var data = {
 			name: $("#name").val().trim(),
 			phone: $("#phone").val().trim(),
 			email: $("#email").val().trim(),
-			unique: $("#unique").val().trim()
+			uniqueId: $("#unique").val().trim()
 		};
-		console.log(data);
+		// Post the data to the server
 		$.post("reserve", data)
-		.then(function(){
-			console.log("Added Reservation!");
-			alert("Added Reservation!");
+		.then(function() {
+			if (data.isWaitListed)
+				alert("Sorry the tables are full!  Waitlisted.");
+			else
+				alert("Added Reservation! Thank you.");
 		});
 	});
 </script>

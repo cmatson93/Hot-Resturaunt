@@ -48,9 +48,9 @@
         	if (data) {
         		for (var i=0; i<data.length; i++) {
         			$("#reservations").append("<p>Name: " + data[i].name + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].email + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].phone + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].unique + "</p>");
+        			$("#reservations").append("<p>Email: " + data[i].email + "</p>");
+        			$("#reservations").append("<p>Phone: " + data[i].phone + "</p>");
+        			$("#reservations").append("<p>ID: " + data[i].uniqueId + "</p>");
         			$("#reservations").append("<hr>");
         		}
         	}
@@ -59,11 +59,11 @@
 			console.log(data);
         	if (data) {
         		for (var i=0; i<data.length; i++) {
-        			$("#reservations").append("<p>Name: " + data[i].name + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].email + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].phone + "</p>");
-        			$("#reservations").append("<p>Name: " + data[i].unique + "</p>");
-        			$("#reservations").append("<hr>");
+        			$("#waitlist").append("<p>Name: " + data[i].name + "</p>");
+        			$("#waitlist").append("<p>Email: " + data[i].email + "</p>");
+        			$("#waitlist").append("<p>Phone: " + data[i].phone + "</p>");
+        			$("#waitlist").append("<p>ID: " + data[i].uniqueId + "</p>");
+        			$("#waitlist").append("<hr>");
         		}
         	}
 		});
