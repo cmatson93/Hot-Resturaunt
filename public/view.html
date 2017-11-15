@@ -14,8 +14,8 @@
 				<h1>View Reservations</h1>
 				<hr>
 				<h3>Current Reservations and Waiting List!</h3>
-				<button id="view">Make Reservations Tables</button> 
-				<button id="reserve">Home</button>
+				<a href="/reserve"><button class= "btn btn-danger id="reserve">Make Reservation</button></a>
+				<a href="/"><button class= "btn btn-primary id="home">Home</button></a>
 			</div>
 		</div>
 		<div class="row">
@@ -35,19 +35,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<a href="">Clear Table</a>
-			<a href="/api/reservations">API Table Link</a>
+			<a href="/clear">Clear Table</a> | 
+			<a href="/api/reservations">API Table Link</a> |
 			<a href="/api/waitingList">API Wait List</a>
 		</div>
 	</div>
 
 <script type="text/javascript">
-	$("#view").on("click", function() {
-		location.href = "./view.html";
-	});
-	$("#reserve").on("click", function() {
-		location.href = "./reserve.html";
-	});
 </script>
 </body>
 </html>
