@@ -65,6 +65,12 @@
 				alert("Sorry the tables are full!  Waitlisted.");
 			else
 				alert("Added Reservation! Thank you.");
+
+			// Now that we have posted the data, let us reset the form
+			$("#name").val('');
+			$("#phone").val('');
+			$("#email").val('');
+			$("#unique").val('');
 		});
 	});
 </script>
